@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "X follow to list",
+  "version": "0.1.8",
+  "description": "在 X 关注页筛选用户，并按可恢复队列加入到指定列表。",
+  "permissions": ["storage"],
+  "host_permissions": ["https://x.com/*", "https://twitter.com/*"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "打开 X follow to list"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["src/page-hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["src/job-state.js", "src/data-store.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
