@@ -1,101 +1,96 @@
-# X follow to list
+# X Follow to List
 
-在 X（Twitter）的 Following 页面筛选你关注的人，再把你明确勾选的账号加入指定 X List。
+**Filter your Following and bulk add selected accounts to any X/Twitter List**  
+Free local Chrome extension. No API key, no server, all data stays in your browser.
 
-**不需要开发者 API，不需要服务器，也不需要安装额外依赖。** 数据与任务进度保存在浏览器本地。
+[English](#english) | [中文](#中文)
 
-[快速开始](#快速开始) · [功能](#功能) · [操作流程](#操作流程) · [任务恢复](#任务恢复) · [注意事项](#注意事项)
+---
 
-> [!IMPORTANT]
-> 这是个人效率工具，不是 X 官方产品。它会使用你当前登录的 X 网页会话执行列表操作。请只处理自己明确选择的账号，并遵守 X 的平台规则。
+## English
 
-## 快速开始
+### Overview
+X Follow to List is a Chrome extension that helps you efficiently manage your X (Twitter) Lists. It automatically captures accounts from your **Following** page, lets you apply powerful filters, and bulk-adds selected accounts to any List with smart rate limiting.
 
-### 安装扩展
+### ✨ Features
+- **Smart Capture** — Automatically collects accounts while scrolling your Following page (only real follows, no recommendations mixed in)
+- **Advanced Filtering** — Filter by keywords (include/exclude), follower count, following count, posts count, location, mutual follow, and more
+- **Easy Selection** — Select all, invert selection, or pick individually. Export selected accounts as CSV
+- **Bulk Add to List** — Paste any List share link and add accounts in batches with random delays
+- **Task Management** — Pause/resume, batch waiting, snapshot export/import, history tracking
+- **Privacy First** — Everything runs locally in your browser. No data is sent anywhere
 
-1. 下载并解压 `X follow to list-0.1.8.zip`，或直接克隆本仓库。
-2. 打开扩展管理页：Edge 使用 `edge://extensions`；Chrome 使用 `chrome://extensions`。
-3. 开启“开发人员模式”，点击“加载已解压的扩展程序”。
-4. 选择 `extension-dist/` 文件夹；若使用 ZIP，则选择解压后**直接包含 `manifest.json`** 的文件夹。
-5. 打开自己的 Following 页面，例如 `https://x.com/<你的用户名>/following`，点击工具栏中的 **X follow to list** 图标。
+### Quick Start
+1. Download the latest release or clone this repo
+2. Go to `chrome://extensions/` (or Edge equivalent)
+3. Enable **Developer mode** → **Load unpacked** → Select the `extension-dist` folder
+4. Open your Following page (`https://x.com/yourusername/following`)
+5. Click the extension icon to open the panel
 
-### 完成一次导入
+### How to Use
+1. Scroll down on your Following page to capture accounts
+2. Use the filter panel to narrow down results
+3. Select the accounts you want
+4. Go to your target List, copy its share link, and paste it in the panel
+5. Adjust rate settings if needed, confirm, and start importing
 
-1. 在 Following 页面向下滚动，等待面板显示已捕获的账号。
-2. 填写筛选条件，点击“确定筛选”，勾选目标账号。
-3. 打开目标 X List，复制列表分享链接并粘贴到面板。
-4. 勾选风险确认，点击“导入到列表”。
+### Task Recovery & Safety
+- Tasks can be paused and resumed later
+- Use **Export Snapshot** to save progress and restore on another browser
+- Built-in delays and batch limits help avoid rate limits
+- The extension respects X’s limits and will pause when needed
 
-> [!TIP]
-> 第一次使用建议先只选少量账号，确认目标列表与节奏设置无误后，再处理完整名单。
+### Notes & Warnings
+- **Safe Bulk Operation**: For safety, limit to **200–300 adds per day**. Use random intervals (3–8 seconds). Start with small test batches (e.g. 10–20 accounts) before scaling up.
+- Each List can have a maximum of 5,000 members
+- Bulk operations carry some risk of rate limiting or temporary restrictions — use responsibly
+- All data is stored locally in your browser extension storage
+- Clear browser data or uninstalling the extension will remove local tasks (export snapshots first)
 
-## 功能
+---
 
-| 能力 | 说明 |
-| --- | --- |
-| 捕获关注账号 | 只从 Following 请求中收集已加载账号，不把推荐账号混入关注列表。 |
-| 多条件筛选 | 支持姓名、@用户名、简介、位置、包含/排除关键词、粉丝数、关注数、发帖数与仅互关。 |
-| 账号选择 | 查看头像、姓名、简介与数据指标；支持全选当前结果、反选、清空已选。 |
-| CSV 导出 | 将勾选账号导出为 CSV，便于备份或在其他工具中处理。 |
-| 加入 X List | 将已选账号按队列加入你提供的目标列表。 |
-| 节奏设置 | 设置随机操作间隔、每批账号数、批次暂停时间与单项重试次数。 |
-| 可恢复任务 | 支持暂停、停止保留进度、自动批次恢复、结果导出、快照导入/导出与历史任务。 |
+## 中文
 
-## 操作流程
+### 项目概述
+**X Follow to List** 是一个免费的 Chrome 扩展，帮助你在 X（Twitter）上高效管理列表。  
+它可以自动捕获你「正在关注」页面中的账号，支持多条件筛选，并一键批量添加到任意列表。
 
-### 1. 捕获关注账号
+### ✨ 主要功能
+- **智能捕获**：在 Following 页面滚动时自动收集真实关注账号（不会混入推荐账号）
+- **强大筛选**：支持关键词（包含/排除）、粉丝数、关注数、发帖数、位置、仅互关等多种条件
+- **灵活选择**：全选、反选、单个勾选，支持导出已选账号为 CSV
+- **批量导入列表**：粘贴列表分享链接，带随机间隔批量添加
+- **任务管理**：支持暂停/继续、批次等待、快照导出/导入、历史记录
+- **隐私安全**：所有数据和操作均在浏览器本地完成，无需 API Key
 
-打开扩展后，在自己的 Following 页面正常向下滚动。X 已加载的关注账号会被保存到当前浏览器本地，面板标题会显示“已捕获 N 人”。继续滚动即可补充更多账号。
+### 快速开始
+1. 下载最新 Release 或克隆本仓库
+2. 打开 `chrome://extensions/`（或 Edge 对应页面）
+3. 开启「开发者模式」→ 点击「加载已解压的扩展程序」→ 选择 `extension-dist` 文件夹
+4. 打开你的 Following 页面（如 `https://x.com/你的用户名/following`）
+5. 点击浏览器右上角扩展图标打开面板
 
-如需从头读取，点击面板顶部的“清除已捕获”，确认后刷新并继续滚动 Following 页面。
+### 使用流程
+1. 在 Following 页面向下滚动捕获账号
+2. 使用筛选面板设置条件并点击「确定筛选」
+3. 勾选需要添加的账号
+4. 打开目标列表，复制分享链接并粘贴到面板
+5. 调整速率设置，确认后开始导入
 
-> [!NOTE]
-> “清除已捕获”只清除本地账号缓存与当前勾选状态；不会删除正在进行的导入任务、任务进度或历史记录。
+### 任务恢复与安全
+- 支持随时暂停和继续任务
+- 可使用「导出快照」保存进度，在其他浏览器恢复
+- 内置随机延时和批次限制，帮助避免触发限流
+- 遇到限流时会自动暂停并提示
 
-### 2. 筛选并选择
+### 注意事项
+- **安全批量操作建议**：为降低封号风险，建议每天添加 **200–300 个** 以内，使用随机间隔（3–8 秒）。第一次使用建议先小批量测试（10–20 个），确认正常后再逐步增加。
+- 单个列表最多可容纳 5000 个成员
+- 批量操作存在被限流或临时限制的风险，请合理使用
+- 所有数据仅保存在浏览器本地扩展存储中
+- 清除浏览器数据或卸载扩展会导致本地任务丢失（建议先导出快照）
 
-可以任意组合条件，例如：
+---
 
-- 简介包含 `design`，粉丝数不少于 `1000`；
-- 位置为 `Shanghai`，且排除简介包含 `招聘` 的账号；
-- 只保留互关账号，再按粉丝数范围筛选。
-
-所有条件填完后，点击“确定筛选”才会更新结果。随后可逐个勾选，或使用“全选当前结果”“反选当前结果”“清空已选”。“导出已选 CSV”会下载当前选择的账号数据。
-
-### 3. 导入到列表
-
-1. 在 X 中打开目标 List，复制分享链接，例如 `https://x.com/i/lists/1234567890`。
-2. 粘贴到“列表分享链接”。当前登录账号必须拥有管理该列表的权限。
-3. 按需要展开“节奏与恢复设置”，调整导入速度与批次暂停。
-4. 阅读风险提示、勾选确认，然后点击“导入到列表”。
-
-面板会实时显示任务状态、完成数量、待处理数量、成功数量、已存在数量、失败数量和下一位待处理账号。
-
-## 任务恢复
-
-| 情况 | 行为 |
-| --- | --- |
-| 到达每批账号数 | 进入批次等待，倒计时结束后自动继续。 |
-| 想立即继续 | 点击“取消等待，继续任务”。 |
-| 手动暂停或停止 | 未完成账号保留，可稍后继续。 |
-| X 限流或拒绝请求 | 保留进度并显示冷却信息；工具不会绕过平台冷却。 |
-| 需要迁移或备份任务 | 使用“导出快照”；在另一处通过“导入快照”恢复。 |
-| 任务结束 | 点击“结束任务”，任务会保存在历史记录中。 |
-
-任务恢复时会校验当前 X 会话和目标列表，避免切换账号或更换列表后出现错位导入。
-
-## 数据与注意事项
-
-- 账号列表、筛选条件、勾选状态与任务进度仅保存在浏览器的本地扩展存储中。
-- 扩展没有自建服务器；网络请求仅发生在当前的 `x.com` / `twitter.com` 网页会话中。
-- 删除/重装扩展或清除浏览器扩展数据，可能会删除本地任务；重要任务请先导出快照或结果。
-- 单个 X List 最多可容纳 5,000 个成员，开始前会进行限制检查。
-- X 的页面接口与规则可能变化；批量操作也可能触发限流、暂停、功能限制或账号限制。
-- 不要向任何人发送浏览器 Cookie、请求头、会话令牌或其他登录凭据。
-
-## 发布内容
-
-| 文件 | 用途 |
-| --- | --- |
-| `extension-dist/` | 通过“加载已解压的扩展程序”直接安装。 |
-| `X follow to list-0.1.8.zip` | 与 `extension-dist/` 相同的发布构建压缩包。 |
+**Made with ❤️ by DrErwin**  
+如果这个工具对你有帮助，欢迎点个 **⭐ Star** 支持继续开发！
