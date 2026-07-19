@@ -1,3 +1,7 @@
 # Codex workspace metadata
 .agents/
 .codex/
+
+# Release artifacts are published through GitHub Releases
+X-follow-to-list-*.zip
+SHA256SUMS.txt

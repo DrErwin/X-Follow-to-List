@@ -36,7 +36,7 @@
 
 ### Download the ready-to-use package / 下载成品包
 
-1. [Download `X-follow-to-list-0.1.9.zip`](https://github.com/DrErwin/X-Follow-to-List/raw/main/X-follow-to-list-0.1.9.zip). The SHA-256 checksum is listed in [`SHA256SUMS.txt`](SHA256SUMS.txt).
+1. [Download the ZIP from the latest GitHub Release](https://github.com/DrErwin/X-Follow-to-List/releases/latest/download/X-follow-to-list.zip). The SHA-256 checksum is available in the [same release](https://github.com/DrErwin/X-Follow-to-List/releases/latest/download/SHA256SUMS.txt).
 2. Extract the ZIP to a permanent folder. Do not delete that folder after installation.
 3. Open your browser's extension page:
    - Chrome: `chrome://extensions/`
