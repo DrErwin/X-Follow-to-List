@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "X Follow to List"
+  },
+  "extensionDescription": {
+    "message": "筛选你在 X 上关注的账号，并通过仅保存在本地的可恢复任务，将所选账号加入指定 X List。"
+  },
+  "actionTitle": {
+    "message": "打开 X Follow to List"
+  }
+}

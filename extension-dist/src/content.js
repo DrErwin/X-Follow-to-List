@@ -1,6 +1,7 @@
 (function installCuratorPanel() {
   const SOURCE = "x-list-curator";
   const STORAGE_KEY = "x-list-curator-state-v1";
+  const EXTENSION_VERSION = chrome.runtime.getManifest().version;
   const MAX_USERS = 5000;
   const ROW_HEIGHT = 88;
   const VISIBLE_ROWS = 14;
@@ -290,7 +291,7 @@
       <style>${css}</style>
       <section class="xcurator-panel" hidden aria-label="X Following Curator">
         <header class="xcurator-header">
-          <div><div class="eyebrow">X FOLLOW TO LIST · 0.1.8</div><h1>把关注列表变成你的清单</h1></div>
+          <div><div class="eyebrow">X FOLLOW TO LIST · ${escapeHtml(EXTENSION_VERSION)}</div><h1>把关注列表变成你的清单</h1></div>
           <div class="header-actions"><button class="clear-capture" data-ref="clearCaptured" data-action="clearCaptured" title="清除本地已捕获账号和勾选状态，不影响导入任务">清除已捕获</button><button class="close" data-action="close" title="关闭">×</button></div>
         </header>
         <div class="xcurator-body">

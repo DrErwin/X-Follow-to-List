@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "X Follow to List"
+  },
+  "extensionDescription": {
+    "message": "Filter accounts you follow on X and add selected accounts to an X List with local, recoverable tasks."
+  },
+  "actionTitle": {
+    "message": "Open X Follow to List"
+  }
+}

@@ -1,7 +1,7 @@
 # X Follow to List
 
 **Filter your Following and bulk add selected accounts to any X/Twitter List**  
-Free local Chrome extension. No API key, no server, all data stays in your browser.
+Free local extension for Chrome and Edge. No API key, no server, all data stays in your browser.
 
 ## Usage Demo / 使用演示
 
@@ -23,7 +23,7 @@ Free local Chrome extension. No API key, no server, all data stays in your brows
   <img src="assets/demo/add-to-list.gif" alt="上传到列表" width="680">
 </p>
 
-[English](#english) | [中文](#中文)
+[English](#english) | [中文](#中文) | [Privacy Policy / 隐私政策](PRIVACY.md)
 
 ---
 
@@ -66,6 +66,7 @@ X Follow to List is a Chrome extension that helps you efficiently manage your X 
 - Bulk operations carry some risk of rate limiting or temporary restrictions — use responsibly
 - All data is stored locally in your browser extension storage
 - Clear browser data or uninstalling the extension will remove local tasks (export snapshots first)
+- This is an independent, unofficial tool and is not affiliated with or endorsed by X Corp.
 
 ---
 
@@ -109,6 +110,7 @@ X Follow to List is a Chrome extension that helps you efficiently manage your X 
 - 批量操作存在被限流或临时限制的风险，请合理使用
 - 所有数据仅保存在浏览器本地扩展存储中
 - 清除浏览器数据或卸载扩展会导致本地任务丢失（建议先导出快照）
+- 本工具为独立开发的非官方产品，与 X Corp. 不存在隶属、授权或背书关系
 
 ---
 
