@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Privacy Policy / 隐私政策
+    url: https://github.com/DrErwin/X-Follow-to-List/blob/main/PRIVACY.md
+    about: Read how the extension handles data locally. / 查看扩展如何在本地处理数据。

@@ -1,0 +1,73 @@
+name: Bug report / 问题反馈
+description: Report a reproducible problem with X Follow to List / 反馈可复现的问题
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please do not include passwords, cookies, authorization headers, CSRF values, or session tokens.
+
+        感谢反馈。请勿提交密码、Cookie、Authorization 请求头、CSRF 值或会话令牌。
+
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version / 扩展版本
+      placeholder: "0.1.9"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser / 浏览器
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - Brave
+        - Other Chromium browser
+    validations:
+      required: true
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser version / 浏览器版本
+      placeholder: "For example: Chrome 138"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened? / 问题描述
+      description: Describe the actual and expected behavior. / 请说明实际结果和预期结果。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps / 复现步骤
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Additional information / 补充信息
+      description: Screenshots or sanitized console errors are welcome. Remove all private account and session information first. / 可附截图或脱敏后的控制台错误，请先移除账号和会话隐私信息。
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check / 安全确认
+      options:
+        - label: I have removed passwords, cookies, authorization headers, CSRF values, and session tokens. / 我已移除密码、Cookie、Authorization 请求头、CSRF 值和会话令牌。
+          required: true
